@@ -5,7 +5,7 @@ project(Hack25)
 set(CMAKE_CXX_STANDARD 17)
 
 # Add the FLTK dir so cmake can find it
-# add_subdirectory(Externals/fltk)
+add_subdirectory(Externals/fltk)
 
 # Include headers
 include_directories(
@@ -24,4 +24,4 @@ file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/View/src/*.cpp
 add_executable(${PROJECT_NAME} ${SOURCES} ${PROJECT_SOURCE_DIR}/main.cpp)
 
 # Link FLTK
-# target_link_libraries(${PROJECT_NAME} fltk fltk_images)
+target_link_libraries(${PROJECT_NAME} fltk fltk_images)
