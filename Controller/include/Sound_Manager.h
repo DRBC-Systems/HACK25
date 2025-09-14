@@ -1,9 +1,9 @@
 /*
 -----------------------------------------------------------
-| Last update: 13/9/2025
+| Last update: 14/9/2025
 | User: Giorgos
-| File: Music_Manager.h
-| Description: Header file for Music_Manager module
+| File: Sound_Manager.h
+| Description: Header file for Sound_Manager module
 -----------------------------------------------------------
 */
 

@@ -1,9 +1,9 @@
 /*
 -----------------------------------------------------------
-| Last update: 13/9/2025
+| Last update: 14/9/2025
 | User: Giorgos
-| File: Controller_Main.h
-| Description: Header file for Controller_Main module
+| File: Controller.h
+| Description: Header file for Controller module
 -----------------------------------------------------------
 */
 
