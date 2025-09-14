@@ -1,0 +1,125 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"fl_add_library"
+		],
+		"files" : 
+		[
+			"Externals/fltk/CMake/fl_add_library.cmake",
+			"Externals/fltk/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 822,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 232,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 828,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 232,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 843,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 232,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 868,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 232,
+				"parent" : 7
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"Externals/fltk/lib/MinSizeRel/fltk.lib"
+			],
+			"targetId" : "fltk::@35d0b7a889fbeb0b8968",
+			"targetIndex" : 5,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"Externals/fltk/lib/MinSizeRel/fltk_forms.lib"
+			],
+			"targetId" : "fltk_forms::@35d0b7a889fbeb0b8968",
+			"targetIndex" : 8,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"Externals/fltk/lib/MinSizeRel/fltk_images.lib"
+			],
+			"targetId" : "fltk_images::@35d0b7a889fbeb0b8968",
+			"targetIndex" : 10,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"Externals/fltk/lib/MinSizeRel/fltk_gl.lib"
+			],
+			"targetId" : "fltk_gl::@35d0b7a889fbeb0b8968",
+			"targetIndex" : 9,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "Externals/fltk/src",
+		"source" : "Externals/fltk/src"
+	}
+}

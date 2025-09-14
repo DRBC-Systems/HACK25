@@ -1,0 +1,71 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"fl_add_library"
+		],
+		"files" : 
+		[
+			"Externals/fltk/CMake/fl_add_library.cmake",
+			"Externals/fltk/zlib/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 47,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 232,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 77,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"Externals/fltk/lib/Debug/fltk_zd.lib"
+			],
+			"targetId" : "fltk_z::@8468f24569c4e2dbea55",
+			"targetIndex" : 13,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include/FL/images",
+			"paths" : 
+			[
+				"Externals/fltk/zlib/zconf.h",
+				"Externals/fltk/zlib/zlib.h",
+				"Externals/fltk/zlib/zutil.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "Externals/fltk/zlib",
+		"source" : "Externals/fltk/zlib"
+	}
+}
