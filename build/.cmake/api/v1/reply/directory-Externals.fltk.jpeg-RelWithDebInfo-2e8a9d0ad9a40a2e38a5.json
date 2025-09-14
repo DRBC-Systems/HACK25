@@ -1,0 +1,73 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"fl_add_library"
+		],
+		"files" : 
+		[
+			"Externals/fltk/CMake/fl_add_library.cmake",
+			"Externals/fltk/jpeg/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 67,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 232,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 112,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"Externals/fltk/lib/RelWithDebInfo/fltk_jpeg.lib"
+			],
+			"targetId" : "fltk_jpeg::@216b8baae1bc6c8b50a5",
+			"targetIndex" : 11,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include/FL/images",
+			"paths" : 
+			[
+				"Externals/fltk/jpeg/jconfig.h",
+				"Externals/fltk/jpeg/jerror.h",
+				"Externals/fltk/jpeg/jmorecfg.h",
+				"Externals/fltk/jpeg/jpeglib.h",
+				"Externals/fltk/jpeg/fltk_jpeg_prefix.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "Externals/fltk/jpeg",
+		"source" : "Externals/fltk/jpeg"
+	}
+}

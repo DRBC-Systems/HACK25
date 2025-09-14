@@ -1,0 +1,276 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "RelWithDebInfo/Hack25.exe"
+		},
+		{
+			"path" : "RelWithDebInfo/Hack25.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"add_optional_libs",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"Externals/fltk/src/CMakeLists.txt",
+			"Externals/fltk/png/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 27,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 823,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 678,
+				"parent" : 4
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 845,
+				"parent" : 3
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 101,
+				"parent" : 7
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG -std:c++17"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 9,
+					"path" : "E:/computer science/CPP/HACK25/Controller/include"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "E:/computer science/CPP/HACK25/Model/include"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "E:/computer science/CPP/HACK25/View/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "E:/computer science/CPP/HACK25/build/Externals/fltk/src/.."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "E:/computer science/CPP/HACK25/Externals/fltk/src/.."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "E:/computer science/CPP/HACK25/Externals/fltk/jpeg"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "E:/computer science/CPP/HACK25/Externals/fltk/png"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "E:/computer science/CPP/HACK25/Externals/fltk/zlib"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "fltk_z::@8468f24569c4e2dbea55"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "fltk_png::@b444a76052a712172bd8"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "fltk_jpeg::@216b8baae1bc6c8b50a5"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "fltk_images::@35d0b7a889fbeb0b8968"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "fltk::@35d0b7a889fbeb0b8968"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "Hack25::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:X86 /debug /INCREMENTAL",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-LIBPATH:\"E:\\computer science\\CPP\\HACK25\\build\\Externals\\fltk\\src\\..\\lib\"",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "Externals\\fltk\\lib\\RelWithDebInfo\\fltk.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "Externals\\fltk\\lib\\RelWithDebInfo\\fltk_images.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "Externals\\fltk\\lib\\RelWithDebInfo\\fltk.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "comctl32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "ws2_32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "gdiplus.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "Externals\\fltk\\lib\\RelWithDebInfo\\fltk_png.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "Externals\\fltk\\lib\\RelWithDebInfo\\fltk_z.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "Externals\\fltk\\lib\\RelWithDebInfo\\fltk_jpeg.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "Hack25",
+	"nameOnDisk" : "Hack25.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "View/src/View.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "main.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
