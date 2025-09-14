@@ -1,10 +1,10 @@
 /*
 -----------------------------------------------------------
-| Last update: 13/9/2025
+| Last update: 14/9/2025
 | User: Giorgos
-| File: Music_Manager.cpp
-| Description: Music_Manager functions implementation.
+| File: Sound_Manager.cpp
+| Description: Sound_Manager functions implementation.
 -----------------------------------------------------------
 */
 
-#include <Music_Manager.h>
+#include <Sound_Manager.h>
