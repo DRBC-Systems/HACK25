@@ -1,5 +1,8 @@
 #include <string>
-
+struct IntSol {
+    int sol1;
+    int sol2=NULL;// If needed
+};
 namespace AI
 {
 class PromptGenerator{
@@ -9,19 +12,19 @@ private:
     Prompt problemType;
 
     std::string genEQ1();
-    int solEQ1();
+    IntSol solEQ1();
 
     std::string genEQ2();
-    int solEQ2();
+    IntSol solEQ2();
 
     std::string genSYS();
-    int solSYS();
-    
+    IntSol solSYS();
+
     std::string genPYTH();
-    int solPYTH();
+    IntSol solPYTH();
 public:
     PromptGenerator(Prompt);
-    int sol(Prompt);
+    IntSol sol(Prompt);
     std::string generate();
 
 };
