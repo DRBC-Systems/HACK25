@@ -12,12 +12,14 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/Controller/include
     ${PROJECT_SOURCE_DIR}/Model/include
     ${PROJECT_SOURCE_DIR}/View/include
+    ${PROJECT_SOURCE_DIR}/AI/include
 )
 
 # Source files
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/Controller/src/*.cpp)
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/Model/src/*.cpp)
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/View/src/*.cpp)
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/AI/src/*.cpp)
 
 
 # Executable
