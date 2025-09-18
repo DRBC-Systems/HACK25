@@ -23,10 +23,16 @@ private:
     std::string genPYTH();
     IntSol solPYTH();
 public:
+<<<<<<< HEAD
     PromptGenerator();
     IntSol sol(Prompt);
     
     std::string generate(Prompt);
+=======
+    PromptGenerator(Prompt);
+    IntSol sol(Prompt);
+    std::string generate();
+>>>>>>> refs/remotes/origin/aggelos
 
 };
 }
