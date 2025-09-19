@@ -16,7 +16,8 @@
 #include <FL/Fl_Choice.H>
 #include <FL/Fl_Menu_Item.H>
 #include <FL/Fl_Menu_Button.H>
-#include <Controller.h>
+#include <functional>
+#include <iostream>
 
 namespace App 
 {
@@ -30,14 +31,15 @@ private:
     Fl_Choice* unit1_choice;
     Fl_Menu_Button* unit1_button;
     
-    Controller* controller;
 public:
     View();
     void show();
     void createBackround(int, int);
     void createUnits(int, int);
-    void setController(Controller* c); // store pointer for callbacks
+    //void setController(Controller* c); // store pointer for callbacks
     void attachUnitChoiceCallback();
+    // "Signal" the controller can subscribe to
+    std::function<void(int)> onUnitSelected;
 };
 
 }

@@ -16,19 +16,29 @@
 
 using namespace App;
 
-Controller::Controller(App::View* view, Model* m) {
-    view->setController(this);
+Controller::Controller(View* v, Model* m)
+    : view(v), model(m)
+{
+    std::cout << "Controller constructor called\n";
+
+    // Attach the View callback function that forwards to the view signal
+    // Ensure View is already constructed and unit1_choice is valid before calling this.
     view->attachUnitChoiceCallback();
+    view->show();
+
+    // subscribe to the view's std::function signal
+    view->onUnitSelected = [this](int idx){
+        this->onUnitSelected(idx);
+    };
 }
 
 void Controller::onUnitSelected(int index) {
-    // For example, update model or print selection
-    std::cout << "Selected unit index: " << index << std::endl;
+    std::cout << "Controller::onUnitSelected called with index = " << index << std::endl;
 }
-/*
+
 void Controller::unit_choice_cb(Fl_Widget* w, void* data) {
     Controller* c = static_cast<Controller*>(data);
     Fl_Choice* choice = static_cast<Fl_Choice*>(w);
-    int idx = choice->value(); // selected index
+    int idx = choice->value();
     c->onUnitSelected(idx);
-}*/
+}

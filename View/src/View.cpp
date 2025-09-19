@@ -108,20 +108,27 @@ void View::createUnits(int winW, int winH){
 
 }
 
-
+/*
 void View::setController(Controller* c) {
     controller = c;
-}
+}*/
+
 
 void View::attachUnitChoiceCallback() {
-    unit1_choice->callback([](Fl_Widget* w, void* data){
+    unit1_choice->callback([](Fl_Widget* w, void* data) {
         View* view = static_cast<View*>(data);
         Fl_Choice* choice = static_cast<Fl_Choice*>(w);
         int idx = choice->value();
-        if (view->controller)
-            view->controller->onUnitSelected(idx);
+
+        std::cout << "View: choice selected idx = " << idx << std::endl;
+
+        // Fire the "signal" if a subscriber exists
+        if (view->onUnitSelected) {
+            view->onUnitSelected(idx);
+        }
     }, this);
 }
+
 
 void View::show() {
     window->show();
