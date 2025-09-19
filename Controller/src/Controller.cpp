@@ -21,15 +21,15 @@ Controller::Controller(View* v, Model* m)
 {
     std::cout << "Controller constructor called\n";
 
-    // Attach the View callback function that forwards to the view signal
-    // Ensure View is already constructed and unit1_choice is valid before calling this.
-    view->attachUnitChoiceCallback();
     view->show();
 
-    // subscribe to the view's std::function signal
-    view->onUnitSelected = [this](int idx){
+    view->onUnitSelected = [this](int idx) {
+        std::cout << "DEBUG: Controller subscriber lambda called with idx=" << idx << std::endl;
         this->onUnitSelected(idx);
     };
+    
+    std::cout << "DEBUG: Controller subscribed to view->onUnitSelected\n";
+
 }
 
 void Controller::onUnitSelected(int index) {

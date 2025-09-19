@@ -9,10 +9,12 @@
 
 #include <View.h>
 #include <string>
+#include <FL/fl_message.H>
+#include <cassert>
 
 using namespace App;
 
-    const char* unit_items[] = {
+    const char* unit_Titles[] = {
         "Unit 1",
         "Unit 2",
         "Unit 3",
@@ -21,7 +23,7 @@ using namespace App;
         nullptr  // terminator
     };
 
-    Fl_Menu_Item View::unit1_items[] = {
+    Fl_Menu_Item View::unit_items[] = {
     {"Option 1", 0, 0, 0},
     {"Option 2", 0, 0, 0},
     {"Option 3", 0, 0, 0},
@@ -84,49 +86,46 @@ void View::createBackround(int winW, int winH){
 
 
 void View::createUnits(int winW, int winH){
+    
     for (int i = 0; i < 300 ; i += 100){
         // Dropdown choice
-        Fl_Box* unit1_label_bg = new Fl_Box(45, 100 + i, 73, 50, unit_items[i/100] );
-        unit1_label_bg->box(FL_BORDER_BOX);
-        unit1_label_bg->color(fl_rgb_color(35, 10, 45));  // purple background
-        unit1_label_bg->size(130, 50);
+        Fl_Box* unit_label_bg = new Fl_Box(45, 100 + i, 73, 50, unit_Titles[i/100] );
+        unit_label_bg->box(FL_BORDER_BOX);
+        unit_label_bg->color(fl_rgb_color(35, 10, 45));  // purple background
+        unit_label_bg->size(130, 50);
 
-        unit1_label_bg->labelsize(36);
-        unit1_label_bg->labelcolor(fl_rgb_color(255, 255, 255)); // label white
-        unit1_label_bg->labelfont(FL_HELVETICA_BOLD);
+        unit_label_bg->labelsize(36);
+        unit_label_bg->labelcolor(fl_rgb_color(255, 255, 255)); // label white
+        unit_label_bg->labelfont(FL_HELVETICA_BOLD);
 
     
-        unit1_choice = new Fl_Choice(210, 100 + i, 360, 50, "");
-       // unit1_choice->callback(unit_choice_cb, controller);
-        unit1_choice->menu(unit1_items);
-        unit1_choice->box(FL_FLAT_BOX);
-        unit1_choice->color(fl_rgb_color(35, 10, 45));    // purple background
-        unit1_choice->labelcolor(fl_rgb_color(255, 255, 255)); // label white
-        unit1_choice->labelfont(FL_HELVETICA_BOLD);
-        unit1_choice->textsize(20);
+        Fl_Choice* choice = new Fl_Choice(210, 100 + i, 360, 50, "");
+       // unit_choice->callback(unit_choice_cb, controller);
+        choice->menu(unit_items);
+        choice->box(FL_FLAT_BOX);
+        choice->color(fl_rgb_color(35, 10, 45));    // purple background
+        choice->labelcolor(fl_rgb_color(255, 255, 255)); // label white
+        choice->labelfont(FL_HELVETICA_BOLD);
+        choice->textsize(20);
+
+        choice->callback([](Fl_Widget* w, void* data){
+            View* view = static_cast<View*>(data);
+            Fl_Choice* choice = static_cast<Fl_Choice*>(w);
+            int idx = choice->value();
+
+            // Always-visible debug
+            fl_message("DEBUG: View callback called; idx=%d", idx);
+            std::cerr << "DEBUG: View callback idx=" << idx << std::endl;
+
+            if (view->onUnitSelected) {
+                view->onUnitSelected(idx);
+            } else {
+                std::cerr << "DEBUG: onUnitSelected not set\n";
+            }
+        }, this);
     }
 
-}
 
-/*
-void View::setController(Controller* c) {
-    controller = c;
-}*/
-
-
-void View::attachUnitChoiceCallback() {
-    unit1_choice->callback([](Fl_Widget* w, void* data) {
-        View* view = static_cast<View*>(data);
-        Fl_Choice* choice = static_cast<Fl_Choice*>(w);
-        int idx = choice->value();
-
-        std::cout << "View: choice selected idx = " << idx << std::endl;
-
-        // Fire the "signal" if a subscriber exists
-        if (view->onUnitSelected) {
-            view->onUnitSelected(idx);
-        }
-    }, this);
 }
 
 

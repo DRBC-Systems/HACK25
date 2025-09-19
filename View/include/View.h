@@ -27,17 +27,16 @@ private:
     Fl_Window* window;
     Fl_Button* button;
     Fl_Box* title;
-    static Fl_Menu_Item unit1_items[];
-    Fl_Choice* unit1_choice;
-    Fl_Menu_Button* unit1_button;
+    static Fl_Menu_Item unit_items[];
+    //Fl_Choice* unit_choice;
+    Fl_Menu_Button* unit_button;
     
 public:
     View();
     void show();
     void createBackround(int, int);
     void createUnits(int, int);
-    //void setController(Controller* c); // store pointer for callbacks
-    void attachUnitChoiceCallback();
+
     // "Signal" the controller can subscribe to
     std::function<void(int)> onUnitSelected;
 };
