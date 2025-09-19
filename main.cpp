@@ -1,5 +1,12 @@
+#include <FL/Fl.H>
+//#include <View.h>
+//#include <Controller.h>
+#include <Model.h>
 #include <iostream>
+using namespace App;
 
-int main(){
-    std::cout << "Test2 giorgos." << std::endl;
+int main() {
+    Model m;  // call constructor
+    std::cout << "Model instance created successfully!" << std::endl;
+    return 0;
 }

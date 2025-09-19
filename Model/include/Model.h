@@ -10,6 +10,18 @@
 #ifndef MODEL_H
 #define MODEL_H
 
+namespace App 
+{
 
+class Model{
+private:
+
+
+public:
+    Model();
+
+};
+
+}
 
 #endif
