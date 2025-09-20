@@ -8,3 +8,10 @@
 */
 
 #include <Model.h>
+#include <iostream>
+
+using namespace App;
+
+Model::Model() {
+    std::cout<<"Model constructor called!\n";
+}
