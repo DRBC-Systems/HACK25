@@ -1,4 +1,8 @@
 #include <string>
+
+#ifndef PROMPT_H
+#define PROMPT_H
+
 struct IntSol {
     int sol1;
     int sol2=NULL;// If needed
@@ -11,22 +15,34 @@ public:
 private:
     Prompt problemType;
 
+    /**
+     * @brief Creates a first order equation e.g. aX + b = c.
+     * 
+     * @return std::string
+     */
     std::string genEQ1();
-    IntSol solEQ1();
-
+    /**
+     * @brief Creates a second order equation e.g. aX^2 + bX + c = 0.
+     * 
+     * @return std::string
+     */
     std::string genEQ2();
-    IntSol solEQ2();
-
+    /**
+     * @brief Creates a system of 2X2 equations.
+     * 
+     * @return std::string
+     */
     std::string genSYS();
-    IntSol solSYS();
-
+    /**
+     * @brief Creates a pythagorean triangle e.g. A, B, C, right angle: A.
+     * 
+     * @return std::string
+     */
     std::string genPYTH();
-    IntSol solPYTH();
 public:
-    PromptGenerator();
-    IntSol sol(Prompt);
-    
+    PromptGenerator();    
     std::string generate(Prompt);
 
 };
 }
+#endif
