@@ -10,5 +10,36 @@
 #ifndef VIEW_H
 #define VIEW_H
 
+#include <FL/Fl_Window.H>
+#include <FL/Fl_Button.H>
+#include <FL/Fl_Box.H>
+#include <FL/Fl_Choice.H>
+#include <FL/Fl_Menu_Item.H>
+#include <FL/Fl_Menu_Button.H>
+#include <functional>
+#include <iostream>
 
+namespace App 
+{
+
+class View {
+private:
+    Fl_Window* window;
+    Fl_Button* button;
+    Fl_Box* title;
+    static Fl_Menu_Item unit_items[];
+    //Fl_Choice* unit_choice;
+    Fl_Menu_Button* unit_button;
+    
+public:
+    View();
+    void show();
+    void createBackround(int, int);
+    void createUnits(int, int);
+
+    // "Signal" the controller can subscribe to
+    std::function<void(int)> onUnitSelected;
+};
+
+}
 #endif
