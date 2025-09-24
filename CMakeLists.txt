@@ -4,6 +4,8 @@ project(Hack25)
 # Set cmake version
 set(CMAKE_CXX_STANDARD 17)
 
+file(COPY Assets DESTINATION ${CMAKE_BINARY_DIR})
+
 # Add the FLTK dir so cmake can find it
 add_subdirectory(Externals/fltk)
 
